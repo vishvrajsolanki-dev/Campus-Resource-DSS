@@ -1,0 +1,21 @@
+## Decision Outputs
+## Decision Inputs
+- Average hourly footfall
+- Peak hour footfall
+- Percentage of time at high occupancy
+- Sustained high-usage duration
+
+## Threshold Philosophy
+- Decisions are based on sustained patterns, not single spikes
+- Peak usage alone should not trigger permanent action
+- Temporary overcrowding leads to monitoring, not expansion
+- Capacity-related actions must be conservative due to proxy data
+
+## Data-to-Decision Mapping
+- Average hourly footfall → total count column (aggregated by hour)
+- Peak hour footfall → maximum hourly count per day
+- Percentage of time at high occupancy → proportion of hours above a chosen threshold
+- Sustained high-usage duration → consecutive hours above threshold
+
+Primary footfall signal: Total_Occupancy
+
